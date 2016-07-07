@@ -1,0 +1,65 @@
+{
+  "project": {
+    "projectSettingsVersion": "3.0.0",
+    "initialAutoPluginCount": 0,
+    "currentBuildConfiguration": "Android",
+    "projectFiles": {},
+    "projectDirectories": {}
+  },
+  "editorTab": {
+    "currentEditorMode": 0
+  },
+  "iot-tab": {
+    "fileStatus": {
+      "README.md": {
+        "previousModTime": 1467817120212,
+        "modified": 1467817120212,
+        "seen": true,
+        "name": "README.md"
+      },
+      "SimpleRest.xdk": {
+        "previousModTime": 1467817214596,
+        "modified": 1467817214596,
+        "seen": true,
+        "name": "SimpleRest.xdk"
+      },
+      "SimpleRest.xdke": {
+        "previousModTime": 1467911133269,
+        "modified": 1467911133269,
+        "seen": true,
+        "name": "SimpleRest.xdke"
+      },
+      "icon.png": {
+        "previousModTime": 1467817120213,
+        "modified": 1467817120213,
+        "seen": true,
+        "name": "icon.png"
+      },
+      "main.js": {
+        "previousModTime": 1467911122030,
+        "modified": 1467911122030,
+        "seen": true,
+        "name": "main.js"
+      },
+      "package.json": {
+        "previousModTime": 1467820250661,
+        "modified": 1467820250661,
+        "seen": true,
+        "name": "package.json"
+      },
+      "xdk-publish-meta-data.json": {
+        "previousModTime": 1467817120912,
+        "modified": 1467817120912,
+        "seen": true,
+        "name": "xdk-publish-meta-data.json"
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1467817120584,
+        "modified": 1467817120584,
+        "seen": true,
+        "name": "xdk/project-info.json"
+      }
+    },
+    "boardFileStatus": {}
+  }
+}
