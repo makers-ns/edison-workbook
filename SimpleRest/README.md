@@ -1,6 +1,6 @@
-Blank Node.js IoT App
+Edison REST Node.js IoT App
 ============================
-The Blank Node.js sample application distributed within Intel® XDK IoT Edition under the Internet of Things  project creation option.
+The Edison REST  Node.js sample application distributed within Intel® XDK IoT Edition under the Internet of Things  project creation option.
 
 Intel(R) XDK IoT Edition
 -------------------------------------------
