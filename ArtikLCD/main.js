@@ -7,8 +7,6 @@ var mqtt = require('mqtt');
 var mraa = require('mraa');
 var LCD = require('jsupm_i2clcd');
 
-var ORG = '1t3bbb';
-var TYPE = 'intel';
 var ID = '6adba2ccc72e4e8190b553618ace81a0';
 
 var PROTOCOL = 'mqtts';
