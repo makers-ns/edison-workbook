@@ -1,11 +1,3 @@
-/*jslint node:true, vars:true, bitwise:true, unparam:true */
-/*jshint unused:true */
-// Leave the above lines for propper jshinting
-//Type Node.js Here :)
-/*jslint node:true, vars:true, bitwise:true, unparam:true */
-/*jshint unused:true */
-// Leave the above lines for propper jshinting
-//Type Node.js Here :)
 
 var mqtt = require('mqtt');
 var fs = require('fs');
@@ -17,7 +9,7 @@ var temp2 = 0;
 var fcore1 = "/sys/devices/virtual/thermal/thermal_zone3/temp";
 var fcore2 = "/sys/devices/virtual/thermal/thermal_zone4/temp";
 
-var ID = '5b6fd19700674b1882df2a26aa64ee01';
+var ID = '<Device ID here>';
 
 var PROTOCOL = 'mqtts';
 var BROKER ='api.artik.cloud';
@@ -28,7 +20,7 @@ var URL = PROTOCOL + '://' + BROKER;
 URL += ':' + PORT;
 
 var AUTHMETHOD = ID;
-var AUTHTOKEN = '57d9f39b31f04b2185d24c8395418abb';
+var AUTHTOKEN = '<Device Token Here>';
 
 var requireds = { username: AUTHMETHOD, password: AUTHTOKEN };
 var mqttConfig = { 'url': URL, 'requireds': requireds };
