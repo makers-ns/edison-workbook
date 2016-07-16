@@ -3,13 +3,8 @@
 var groveSensor = require('jsupm_grove');
 
 var webSocketUrl = "wss://api.artik.cloud/v1.1/websocket?ack=true";
-var device_id = "<Your Device II>";
-var device_token = "<Your Device Token";
-
-var WebSocket = require('ws');
-var isWebSocketReady = false;
-var ws = null;
-
+var device_id = "<YOUR DEVICE ID>";
+var device_token = "<YOUR DEVICE TOKEN>";
 
 // Create the temperature sensor object using AIO pin 0
 var temp = new groveSensor.GroveTemp(0);
@@ -33,6 +28,7 @@ function start() {
     });
     ws.on('close', function() {
         console.log("WebSocket connection is closed ....");
+        isWebSocketReady = false;
     });
 
 }
@@ -63,20 +59,24 @@ function handleRcvMsg(msg){
 function sendTempToArtikCloud(value){
     try{
         ts = ', "ts": '+getTimeMillis();
-        var data = {
-              "temp": value
+
+        if (isWebSocketReady){
+            var data = {
+                "temp": value
             };
-        var payload = '{"sdid":"'+device_id+'"'+ts+', "data": '+JSON.stringify(data)+', "cid":"'+getTimeMillis()+'"}';
-        console.log('Sending payload ' + payload + '\n');
-        ws.send(payload, {mask: true});
+            var payload = '{"sdid":"'+device_id+'"'+ts+', "data": '+JSON.stringify(data)+', "cid":"'+getTimeMillis()+'"}';
+            console.log('Sending payload ' + payload + '\n');
+            ws.send(payload, {mask: true});
+        }        
     } catch (e) {
         console.error('Error in sending a message: ' + e.toString() +'\n');
     }    
 }
 
-start();
-
 var loop = setInterval(function() {
+        if (!isWebSocketReady){
+            start();
+        }
         var celsius = temp.value();
         console.log(celsius + " degrees Celsius ");
         sendTempToArtikCloud(celsius);
